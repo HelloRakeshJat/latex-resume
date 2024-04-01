@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  % \vspace{-4pt}
+  \color{gray}
+  \item
+\end{flushright}
+
+\vspace{-5pt}
+
+\begin{center}
+    \textbf{\Huge \scshape Rakesh J} \\ \vspace{8pt}
+    \small 
+    \faIcon{github}
+    \href{https://github.com/HelloRakeshJat}{\underline{github.com/hellorakeshjat}} $  $
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/in/hellorakeshjat/}{\underline{linkedin.com/in/hellorakeshjat}} $  $
+    \faIcon{envelope}
+    \href{mailto:hellorakeshjat@gmail.com}
+    {\underline{hellorakeshjat@gmail.com}}
+\end{center}
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+          \resumeProjectHeading
+          {\textbf{Software Development Engineer} $|$ \footnotesize\emph{RampWin Technologies}\vspace{2pt}}{Jul 2023 -- Present}
+          \resumeItemListStart
+          \resumeItem{}{\small{Led the creation of a dynamic flow-builder, revolutionizing automation workflows and streamlining the generation of intricate automation scenarios, resulting in a 50\% increase in workflow efficiency.}}
+          \resumeItem{}{\small{Crafted the Rampwin Chat Support mobile application from inception to deployment, utilizing React Native with TypeScript and Expo. Seamlessly transitioned the prior Flutter-based application, resulting in a 30\% enhancement in responsiveness and user satisfaction.}}
+          \resumeItem{}{\small{Gained hands-on experience in backend development, including working with MongoDB and utilizing Mongoose for efficient data modeling and interaction.}}
+          \resumeItemListEnd
+
+          \resumeProjectHeading
+          {\textbf{Software Developer}\vspace{2pt} $|$ \footnotesize\emph{AssessPrep}}{Feb 2022 -- Jun 2023}
+          \resumeItemListStart
+          \resumeItem{}{\small{Designed Text-to-speech feature from the discovery phase to the delivery phase.}}
+          \resumeItem{}{\small{Developed quick replies for teachers which increased teachers engagement with students by 40\% }}
+          \resumeItem{}{\small{Modified video playback feature extensively (where admin can limit playback times and video cant be paused)}}
+          \resumeItem{}{\small{The Desmos graph calculator implemented with the capability of saving calculations, capturing screenshots, and resizing the calculator.}}
+          \resumeItem{}{\small{Developed a personalized Visual Studio Code extension for Assessprep, integrating internationalization to streamline localization efforts. By replacing strings with keys, the extension facilitated on-hover value display and error detection for missing or mismatched keys. Moreover, the introduction of the "Create Internalization Key" command automated the generation of JSON objects in the localization file from selected strings, resulting in a 80\% reduction in localization time and a 90\% decrease in localization errors.}}
+          \resumeItem{}{\small{Consumed ChatGPT API's with custom prompts. Added functionality to grade students answer and write them a review for their submission. Added palagrism checker for students submissions}}
+          \resumeItemListEnd
+
+          \resumeProjectHeading
+          {\textbf{Software Developer Intern} $|$ \footnotesize\emph{AssessPrep}\vspace{2pt}}{Oct 2021 -- Jan 2022}
+          \resumeItemListStart
+          \resumeItem{}{\small{Participated in the initial wave of developers learning and implemented the ANT.DESIGN library}}
+          \resumeItem{}{\small{Developed a Responsive and Interactive Login Page with Validations using HTML, CSS, JavaScript.}}
+    
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd 
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Bodacious IT Hub} {Jul 2021}
+    {Core Java Trainee}{}
+    \resumeSubheading
+      {MAISM College, Jaipur}{Jun 2021}
+      {Master of Computer Applications}{}
+    \resumeSubheading
+      {Rajasthan University, Jaipur}{Jun 2018}
+      {Bachelor of Computer Applications}{}
+
+    \vspace{-2pt}
+    \subsection{Coursework}
+      \textbf{Courses:} Computer Programming with C++, Object-Oriented Programming (OOps), Data Structures \& Algorithms, Database Management Systems, Discrete Math, Probability \& Statistics \\
+
+  \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     \textbf{Programming Languages}{:  JavaScript/TypeScript, HTML/CSS, React.js, Redux, React native, Node.js} \\
+     \textbf{Testing} {: Cypress, API Load Testing - Loader.io, k6.io} \\
+     \textbf{Tools} {: Jenkins, GithubActions, BitBucket, ReactDevTools, Postman} \\
+     \textbf{Cloud Services}{: Amazon Web Services(AWS), Google Cloud Platform} \\
+     \textbf{Miscellaneous}{: JSON, JWT, Rest API, Git/Github, Linux, Docker, Redis, RabbitMQ, CI/CD, Agile, Jira, Problem Solving}
+     % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+     
+     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     
+    }}
+ \end{itemize}
+\end{document}
